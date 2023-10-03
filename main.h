@@ -12,7 +12,9 @@
 #include <sys/types.h>
 #include <sys/wait.h>
 
-
+extern char **environ;
+#define MAX_ARG_LENGTH 100000
+void free_memmory(char **args);
 
 
 
