@@ -8,7 +8,7 @@ int _stdinput(char *usercommand)
 {
 	size_t buffsize = 0;
 	char *command = NULL;
-	size_t byte = 0;
+	int byte = 0;
 
 	byte = getline(&command,  &buffsize, stdin);
 	if (byte == -1)
