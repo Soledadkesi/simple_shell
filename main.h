@@ -17,6 +17,7 @@ extern char **environ;
 void free_memmory(char **args);
 void _printenv(char **var);
 int str_len(char *str);
-
+char **filehandler(char *filename);
+char *_strcat(char *dest, char *src);
 
 #endif /* end of header*/
