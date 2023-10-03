@@ -15,7 +15,8 @@
 extern char **environ;
 #define MAX_ARG_LENGTH 100000
 void free_memmory(char **args);
-
+void _printenv(char **var);
+int str_len(char *str);
 
 
 #endif /* end of header*/
