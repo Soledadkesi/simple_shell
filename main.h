@@ -19,5 +19,10 @@ void _printenv(char **var);
 int str_len(char *str);
 char **filehandler(char *filename);
 char *_strcat(char *dest, char *src);
-
+void fileargs(char *args);
+int checkifexit(char **args);
+int checkifenv(char *args);
+int _execve(const char *command);
+int _strcmp(char *s1, char *s2);
+int _stdinput(char *usercommand);
 #endif /* end of header*/
