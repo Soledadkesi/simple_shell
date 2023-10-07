@@ -11,6 +11,7 @@ int main(int argc, char **argv, char **env)
 {
 	static char command[MAX_ARG_LENGTH];
 	int i = 1;
+	char *command2 = NULL;
 	char *args[100000] = {NULL};
 	char *token = NULL;
 	int arg_count = 0;
@@ -18,7 +19,7 @@ int main(int argc, char **argv, char **env)
 
 	(void)env;
 
-	if (argc > 1)
+	if (argc >= 2)
 	{
 
 		fileargs(argv[1]);
@@ -27,7 +28,8 @@ int main(int argc, char **argv, char **env)
 	{
 		while (_stdinput(command))
 		{
-			token = strtok(command, ";&&\n");
+			command2 = tokenizeOR(command);
+			token = strtok(command2, ";&&\n");
 			while (token != NULL)
 			{
 				if (token[0] == '#')
