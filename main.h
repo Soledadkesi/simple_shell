@@ -14,7 +14,32 @@
 
 extern char **environ;
 #define MAX_ARG_LENGTH 100000
+/**
+ * struct s_function - ==============
+ * @cd: =======
+ * @cdFunc: ==========
+ */
+
+typedef struct s_function
+{
+	char *cd;
+	void (*cdFunc)(char **cd_ar, const char *name);
+} soliedad;
+
+/**
+ * struct cmd_t - getline command
+ * @command: pointer
+ */
+
+typedef struct cmd_t
+{
+	char *command;
+} cmd_t;
+
+cmd_t cmd;
+cmd_t ess;
 void free_memmory(char **args);
+void sigint_handler(int signo);
 void _printenv(char **var);
 int str_len(char *str);
 char *tokenizeOR(char *command);
@@ -26,4 +51,5 @@ int checkifenv(char *args);
 int _execve(const char *command);
 int _strcmp(char *s1, char *s2);
 int _stdinput(char *usercommand);
+void sigint_handler(int signo);
 #endif /* end of header*/
