@@ -1,10 +1,10 @@
 #include "main.h"
+int _execve(const char *command);
 /**
  * _execve - exec ve
- * command: command
+ * @command: command
+ * Return: int
  */
-#define MAX_COMMAND_LENGTH 100000
-int _execve(const char *command);
 int _execve(const char *command)
 {
 	int pid;

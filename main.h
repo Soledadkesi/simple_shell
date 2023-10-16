@@ -14,6 +14,7 @@
 
 extern char **environ;
 #define MAX_ARG_LENGTH 100000
+#define MAX_COMMAND_LENGTH 100000
 /**
  * struct s_function - ==============
  * @cd: =======
