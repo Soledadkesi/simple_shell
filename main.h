@@ -16,15 +16,14 @@ extern char **environ;
 #define MAX_ARG_LENGTH 100000
 #define MAX_COMMAND_LENGTH 100000
 /**
- * struct s_function - ==============
- * @cd: =======
- * @cdFunc: ==========
+ * struct solidad - ==============
+ * @kk: =======
+ * @kkfunc: ==========
  */
-
-typedef struct s_function
+typedef struct solidad
 {
-	char *cd;
-	void (*cdFunc)(char **cd_ar, const char *name);
+	char *kk;
+	void (*kkfunc)(char *lolo, const char *ch);
 } soliedad;
 
 /**

@@ -12,10 +12,10 @@ int _execve(const char *command)
 	int arg_count = 0;
 	int check = 5;
 	int exit_status;
+	char *token;
 
-	char *token = strtok((char *)command, " \"\'\t\r\n");
-
-	while (token != NULL && arg_count < MAX_COMMAND_LENGTH - 1)
+	token = strtok((char *)command, " \"\'\t\r\n");
+	while (token != NULL)
 	{
 		if (token[0] == '#')
 		{
@@ -42,13 +42,13 @@ int _execve(const char *command)
 
 	if (pid == 0)
 	{
-		if (strcmp(args[0], "ls") == 0)
-		{
-			execve("/bin/ls", args, environ);
-		}
-		else if (strcmp(args[0], "echo") == 0)
+		if (strcmp(args[0], "echo") == 0)
 		{
 			execve("/bin/echo", args, environ);
+		}
+		else if (strcmp(args[0], "ls") == 0)
+		{
+			execve("/bin/ls", args, environ);
 		}
 		else
 		{
