@@ -18,7 +18,7 @@ int main(int argc, char **argv, char **env)
 	int k = 0;
 
 	(void)env;
-
+	ess.program_name = argv[0];
 	if (argc >= 2)
 	{
 

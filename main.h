@@ -29,11 +29,13 @@ typedef struct solidad
 /**
  * struct cmd_t - getline command
  * @command: pointer
+ * @program_name: pname
  */
 
 typedef struct cmd_t
 {
 	char *command;
+	char *program_name;
 } cmd_t;
 
 cmd_t cmd;
@@ -41,6 +43,7 @@ cmd_t ess;
 void free_memmory(char **args);
 void sigint_handler(int signo);
 void _printenv(char **var);
+void _stderror(char *str);
 int str_len(char *str);
 char *tokenizeOR(char *command);
 char **filehandler(char *filename);
