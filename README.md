@@ -1,7 +1,7 @@
 project done by team: Iliya Damina, Abang Soledad Kesi
 You just released the advanced tasks of this project. Have fun!
 0x16. C - Simple Shell
-C
+
 Group project
 Syscall
  By: Julien Barbier
