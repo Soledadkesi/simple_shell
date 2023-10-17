@@ -11,7 +11,7 @@ How to execute another program with the execve system call
 How to suspend the execution of a process until one of its children terminates
 What is EOF / “end-of-file”?
 
-project done by damina & Solidad 
+project done by damina & Solidad cohort 18
  List of allowed functions and system calls
 	access (man 2 access)
 	chdir (man 2 chdir)
