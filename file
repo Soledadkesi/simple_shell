@@ -1,0 +1,7 @@
+write(1, argv[0], strlen(argv[0]);
+write(1,": 1: ", 5);
+write(1, token[0], strlen(token[0]));
+write(1, ": not found\n", 12);
+
+
+./pascal: 1: khbblkkkkkk: not found

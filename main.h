@@ -30,12 +30,14 @@ typedef struct solidad
  * struct cmd_t - getline command
  * @command: pointer
  * @program_name: pname
+ * @errcode: err number
  */
 
 typedef struct cmd_t
 {
 	char *command;
 	char *program_name;
+	int errcode;
 } cmd_t;
 
 cmd_t cmd;
@@ -48,6 +50,8 @@ int str_len(char *str);
 char *tokenizeOR(char *command);
 char **filehandler(char *filename);
 char *_strcat(char *dest, char *src);
+int _putchar(char c);
+void _print_number(int n);
 void fileargs(char *args);
 int checkifexit(char **args);
 int checkifenv(char *args);

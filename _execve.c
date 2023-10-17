@@ -38,6 +38,7 @@ int _execve(const char *command)
 	if (check != 5)
 		return (check);
 
+	ess.errcode++;
 	pid  = fork();
 
 	if (pid == 0)
@@ -55,7 +56,9 @@ int _execve(const char *command)
 			execve(args[0], args, environ);
 		}
 		_stderror(ess.program_name);
-		_stderror(": 1: ");/*./hsh: 1: qwerty: not found*/
+		_stderror(": ");
+		_print_number(ess.errcode);
+		_stderror(": ");/*./hsh: 1: qwerty: not found*/
 		_stderror(args[0]);
 		_stderror(": not found\n");
 		exit(EXIT_FAILURE);
